@@ -17,9 +17,7 @@ import kotlin.concurrent.timerTask
 
 
 @SuppressLint("StaticFieldLeak")
-/**
- * Created by WangLu on 2018/7/15.
- */
+
 object PhotoViewer {
 
     const val INDICATOR_TYPE_DOT = "INDICATOR_TYPE_DOT"
@@ -30,7 +28,7 @@ object PhotoViewer {
     private var mCreatedInterface: OnPhotoViewerCreatedListener? = null
     private var mDestroyInterface: OnPhotoViewerDestroyListener? = null
 
-    private lateinit var imgData: ArrayList<String> // 图片数据
+    private lateinit var imgData: MutableList<String> // 图片数据
     private lateinit var container: WeakReference<ViewGroup>   // 存放图片的容器， ListView/GridView/RecyclerView
     private var currentPage = 0    // 当前页
 
@@ -100,7 +98,7 @@ object PhotoViewer {
     /**
      * 设置图片数据
      */
-    fun setData(data: ArrayList<String>): PhotoViewer {
+    fun setData(data: MutableList<String>): PhotoViewer {
         imgData = data
         return this
     }
