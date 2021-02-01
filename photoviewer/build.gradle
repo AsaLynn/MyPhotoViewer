@@ -39,7 +39,6 @@ repositories {
     mavenCentral()
 }
 
-
 def siteUrl = 'https://github.com/zhang721688/MyPhotoViewer'
 def gitUrl = 'https://github.com/zhang721688/MyPhotoViewer.git'
 def libName = "photoviewer"
