@@ -1,5 +1,4 @@
 include ':photoviewer'
 include ':demo'
-include ':photoviewer'
 include ':app'
 rootProject.name = "MyPhotoViewer"

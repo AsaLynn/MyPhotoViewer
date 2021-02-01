@@ -7,7 +7,7 @@ plugins {
     id 'com.jfrog.bintray'
 }
 
-version = "1.0.1"
+version = "1.0.2"
 
 android {
     compileSdkVersion 30
@@ -33,11 +33,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly 'androidx.appcompat:appcompat:1.2.0'
     compileOnly 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }
 repositories {
     mavenCentral()
 }
+
 
 def siteUrl = 'https://github.com/zhang721688/MyPhotoViewer'
 def gitUrl = 'https://github.com/zhang721688/MyPhotoViewer.git'

@@ -4,6 +4,7 @@ import android.animation.LayoutTransition
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.graphics.Color
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -206,9 +207,9 @@ object PhotoViewer {
 
         // 设置添加layout的动画
         val layoutTransition = LayoutTransition()
-        val alphaOa = ObjectAnimator.ofFloat(null, "alpha", 0f, 1f)
-        alphaOa.duration = 50
-        layoutTransition.setAnimator(LayoutTransition.APPEARING, alphaOa)
+//        val alphaOa = ObjectAnimator.ofFloat(null, "alpha", 0f, 1f)
+//        alphaOa.duration = 50
+//        layoutTransition.setAnimator(LayoutTransition.APPEARING, alphaOa)
         decorView.layoutTransition = layoutTransition
 
         val frameLayout = FrameLayout(activity)
@@ -243,6 +244,7 @@ object PhotoViewer {
             val f = PhotoViewerFragment()
             f.exitListener = object : PhotoViewerFragment.OnExitListener {
                 override fun exit() {
+                    Log.i("PhotoViewerFragment", "exit: ")
                     activity.runOnUiThread {
                         if (mDotGroup != null)
                             mDotGroup!!.removeAllViews()
